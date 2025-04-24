@@ -1,5 +1,5 @@
 public class ContactTriggerHandler {
-    
+
     public static void beforeInsert(List<Contact> newContacts) {
         for (Contact con : newContacts) {
             if (con.DummyJSON_Id_c__c == null) {
@@ -22,8 +22,8 @@ public class ContactTriggerHandler {
             }
         }
 
-        if (!toCall.isEmpty()) {
-            DummyJSONCallout.getDummyJSONUserFromId(toCall);
+        for (Contact con : toCall) {
+            DummyJSONCallout.getDummyJSONUserFromId(con.DummyJSON_Id_c__c); // pass String, as required
         }
     }
 
@@ -46,9 +46,10 @@ public class ContactTriggerHandler {
             }
         }
 
-        if (!toPost.isEmpty()) {
-            DummyJSONCallout.postCreateDummyJSONUser(toPost);
+        for (Contact con : toPost) {
+            DummyJSONCallout.postCreateDummyJSONUser(con.Id); // pass Contact.Id as String
         }
     }
 }
+
 
