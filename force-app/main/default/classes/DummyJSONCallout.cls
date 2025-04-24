@@ -21,6 +21,7 @@
  * https://developer.salesforce.com/docs/atlas.en-us.apexref.meta/apexref/apex_classes_restful_http_httprequest.htm
  */
 
+// editing for changes
 public with sharing class DummyJSONCallout {
 
 	/* 

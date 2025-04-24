@@ -1,3 +1,5 @@
+// editing for changes
+
 public class ContactTriggerHandler {
 
     public static void beforeInsert(List<Contact> newContacts) {

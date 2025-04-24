@@ -16,6 +16,7 @@
  * 
  * Optional Challenge: Use a trigger handler class to implement the trigger logic.
  */
+// editing for changes
 trigger ContactTrigger on Contact (before insert, after insert, after update) {
     if (Trigger.isBefore && Trigger.isInsert) {
         ContactTriggerHandler.beforeInsert(Trigger.new);
